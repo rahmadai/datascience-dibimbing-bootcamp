@@ -26,8 +26,8 @@ userName <- c('Alfa', 'Beta', 'Charlie', 'Delta', 'Echo', 'Foxtrot')
 placeBirth <- c('Ambarawa', 'Bandung', 'Cilacap', 'Depok', 'Ende', 'Flores')
 dateBirth <- c('04/02/1995', '05/04/2006', '23/02/1995', '14/02/1994', '07/09/1995', '16/11/1997')   #dd/mm/yyyy format
 lastOrder <- c('01/11/2021', '04/11/2021', '06/11/2021', '12/11/2021', '02/11/2021', '11/11/2021')   #dd/mm/yyyy format
-avgOrderMonth <- c(310000,14000,960000,12000,90000,230000)   #Value in Rupiah's
-totalTransactionMonth <- c(7,1,11,1,6,6)
+avgOrderMonth <- c(310000, 14000, 960000, 12000, 90000, 230000)   #Value in Rupiah's
+totalTransactionMonth <- c(7, 1, 11, 1, 6, 6)
 
 # Step 2: Create dataframe from all variable initiates before
 
