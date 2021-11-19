@@ -1,8 +1,9 @@
 # Author: Rahmad Kurniawan
 # Title: Homework Datascience dibimbing.id -> Week 1
 # Date: 15 Nov 2021
+# https://github.com/rahmadai/datascience-dibimbing-bootcamp/tree/main/week1
+# MIT License
 # -*- encoding: utf-8 -*-
-#
 
 
 ############################################### Question 1 ############################################### 
@@ -26,7 +27,7 @@ placeBirth <- c('Ambarawa', 'Bandung', 'Cilacap', 'Depok', 'Ende', 'Flores')
 dateBirth <- c('04/02/1995', '05/04/2006', '23/02/1995', '14/02/1994', '07/09/1995', '16/11/1997')   #dd/mm/yyyy format
 lastOrder <- c('01/11/2021', '04/11/2021', '06/11/2021', '12/11/2021', '02/11/2021', '11/11/2021')   #dd/mm/yyyy format
 avgOrderMonth <- c(310000,14000,960000,12000,90000,230000)   #Value in Rupiah's
-totalTransactionMonth <- c(7,1,11,1,2,6)
+totalTransactionMonth <- c(7,1,11,1,6,6)
 
 # Step 2: Create dataframe from all variable initiates before
 
@@ -46,7 +47,7 @@ View(userProfile)
 # Step 4: Create filter function using average order per month and total transaction
 filterLoyalUser <- userProfile$avgOrderMonth > 100000 & userProfile$totalTransactionMonth > 5
 
-# Step 5: 
+# Step 5: Filtering the dataframe using filter function and only show the username
 userProfile[filterLoyalUser,]$userName
 
 # From the value above, the most loyal user this month is Alfa, Charlie, and Foxtrot
