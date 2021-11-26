@@ -1,0 +1,51 @@
+### Coding Exercise 1 _ DS8
+##### Date: 25 Nov 2021
+##### https://github.com/rahmadai/datascience-dibimbing-bootcamp/tree/main/week2
+##### encoding: utf-8
+> Author: Rahmad Kurniawan
+
+Soal 1: Print out integers which are multiples of 3 from 1 to 22.
+(Print out bilangan bulat yang merupakan kelipatan 3 dari 1 sampai 22).
+Ekspektasi jawaban: Ketika kode kalian di-run, muncul angka-angka: 3, 9, 12, 15, 18, 21. Gunakan looping. 
+
+```{r}
+for (x in 1:22){
+  if(x %% 3 == 0) print(x)    
+}
+```
+
+
+Soal 2: Buat sebuah function di R untuk mengecek apakah sebuah angka merupakan bilangan prima atau bukan.
+Ekspektasi jawaban: misal fungsi Anda bernama prime_check. Ketika kita jalankan prime_check(5), maka outputnya adalah '5 is a Prime number'. Fungsi ini harus bisa berlaku untuk input apa pun. 
+
+Clue: Pengecekan bilangan prima menggunakan looping dan modulo. 
+
+```{r}
+primeCheck <- function(number) {
+  primeStat = 0
+  # bilangan prima selalu lebih dari 1
+  if(number > 1){
+  primeStat = 1
+      # looping untuk cek faktor dari bilangan menggunakan modulo
+      for (i in 2:(number-1)) {
+          if ((number %% i) == 0){
+              primeStat = 0
+              break
+          }
+      }
+  }
+  if(number == 2) primeStat = 1
+  # checking kondisi primeStat untuk menentukan bilang tersebut prima atau bukan
+  if(primeStat == 1) {
+  print(paste(number,"is a prime number"))
+  } else {
+  print(paste(number,"is not a prime number"))
+  }
+}
+```
+
+```{r}
+primeCheck(11)
+
+```
+
